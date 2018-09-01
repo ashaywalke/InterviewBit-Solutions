@@ -23,7 +23,7 @@ vector<Interval> Solution::merge(vector<Interval> &A) {
         lastInterval = v[v.size()-1];
         if(lastInterval.end < A[i].start) v.push_back(A[i]);
         else if (lastInterval.end >=A[i].start && lastInterval.end<=A[i].end){
-            v[v.size()-1] = Interval(lastInterval.start, A[i].end);
+            v[v.size()-1].end = A[i].end;
         }
         
     }
