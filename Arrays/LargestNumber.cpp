@@ -1,9 +1,5 @@
 bool myCompare(string x, string y){
-    string xy, yx;
-    xy = x+y;
-    yx = y+x;
-    if(xy>yx) return false;
-    else return true;
+    return x+y <y+x;
 }
 string Solution::largestNumber(const vector<int> &A) {
 
