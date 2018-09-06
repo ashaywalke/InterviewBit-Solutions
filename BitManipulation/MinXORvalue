@@ -1,0 +1,9 @@
+int Solution::findMinXor(vector<int> &A) {
+sort(A.begin(), A.end());
+int minxor=INT_MAX;
+for(int i=0;i<A.size()-1;i++){
+    minxor=min(minxor,A[i]^A[i+1]);
+}
+return minxor;
+}
+//Can anyone suggest how to use trie in this method?
