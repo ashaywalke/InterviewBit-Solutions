@@ -1,4 +1,30 @@
+int romantoint(char c){
+    switch(c){
+    case 'I':   return 1;
+    case 'V':   return 5;
+    case 'X':   return 10;
+    case 'L':   return 50;
+    case 'C':   return 100;
+    case 'D':   return 500;
+    case 'M':   return 1000;
+    default:    return 0;  
+    }
+}
+
 int Solution::romanToInt(string A) {
+    int num=0,size=A.size();
+    for(int i=0;i<size;i++){
+        if(i<size-1&&romantoint(A[i])<romantoint(A[i+1])){
+            num-=romantoint(A[i]);
+        } 
+        else num+=romantoint(A[i]);
+    }
+    return num;
+}
+
+//Solution 2
+
+/*int Solution::romanToInt(string A) {
 
     map<char,int> dict = {{'I',1},{'X',10},{'L', 50}, {'C', 100},{'D', 500},{'M', 1000}};
     int sum=0, i=0;
@@ -35,4 +61,4 @@ int Solution::romanToInt(string A) {
     
     
     return sum;
-}
+}*/
