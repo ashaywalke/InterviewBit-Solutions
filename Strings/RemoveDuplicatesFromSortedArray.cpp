@@ -20,3 +20,18 @@ int Solution::removeDuplicates(vector<int> &A) {
     A.resize(j);
     return j;
 }
+
+//Solution 2 Better One
+/*int Solution::removeDuplicates(vector<int> &A) {
+    int size=A.size();
+    int j=0;
+    for(int i=0;i<size;i++){
+        if(i<size-1 &&A[i+1]==A[i]) continue;
+        else{
+            A[j]=A[i];j++;
+            // cout<<"C1"<<endl;
+        }
+    }
+    return j;
+    
+}*/
