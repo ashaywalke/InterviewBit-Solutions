@@ -1,4 +1,4 @@
-int isPalindromic(string s){
+/*int isPalindromic(string s){
     int i=0, j=s.length()-1;
      while(i<j){
          while(i<j&&!isalnum(s[i]))i++;
@@ -11,6 +11,7 @@ int isPalindromic(string s){
      return 1;
  
 }
+//Solution1
 int Solution::solve(string A) {
     string str={};
     string B=A;
@@ -29,4 +30,19 @@ int Solution::solve(string A) {
         // reverse(B.begin(), B.end());
         
     }
+}*/
+//Solution 2
+int Solution::solve(string A) {
+    int start=0, end=A.length()-1,temp_end=end;
+    while(start<=temp_end){
+        if(temp_end>=start && A[start]==A[temp_end]){
+            start++;
+            temp_end--;
+        }
+        else{
+            start=0;
+            temp_end=--end;
+        }
+    }
+    return A.length()-(end+1);
 }
