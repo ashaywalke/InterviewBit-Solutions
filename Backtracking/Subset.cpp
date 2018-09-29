@@ -1,3 +1,4 @@
+/*
 bool mycomp(vector<int> v1, vector<int> v2){
     int ct=0;
     for(int i=0;i<min(v1.size(), v2.size());i++){
@@ -8,6 +9,7 @@ bool mycomp(vector<int> v1, vector<int> v2){
     if(ct==min(v1.size(), v2.size())) 
         return v1.size()<v2.size();
 }
+*/
 void search(int k, vector<int> A, vector<int> subset, vector<vector<int>> &S){
     int n=A.size();
     // vector<int> subset;
@@ -28,7 +30,7 @@ vector<vector<int> > Solution::subsets(vector<int> &A) {
     vector<int> subset;
     vector<vector<int>> S;
     search(0, A, subset, S);
-    sort(S.begin(), S.end(), mycomp);
+    sort(S.begin(), S.end());
     return S;
     
 }
