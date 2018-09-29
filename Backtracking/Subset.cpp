@@ -34,3 +34,17 @@ vector<vector<int> > Solution::subsets(vector<int> &A) {
     return S;
     
 }
+
+/*
+4	September 29, 2018 16:15	
+Correct Answer
+
+577 ms	9976 KB	
+3	September 29, 2018 16:08	
+Correct Answer
+
+630 ms	7052 KB	
+2	September 29, 2018 16:08	
+Correct Answer
+
+63 ms	2936 KB	*/
